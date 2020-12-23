@@ -1,0 +1,493 @@
+{
+	"info": {
+		"_postman_id": "5cb60ecf-fa74-4cb0-aad7-2771815b8917",
+		"name": "Swagger Webmotors",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Make",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb78e8eb-ae1e-4eae-a089-7c151915d481",
+						"exec": [
+							"let body        = JSON.parse(responseBody);",
+							"let contentType = postman.getResponseHeader(\"Content-Type\");",
+							"let timeout     = pm.environment.get(\"timeout\");",
+							"",
+							"",
+							"tests[\"Valida código status\"]    = (responseCode.code === 200);",
+							"tests[\"Valida Content-Type\"]     = (contentType === \"application/json; charset=utf-8\");",
+							"",
+							"for (let i in body) {",
+							"    tests[\"Valida ID \" + i]    = (body[i].ID >= 0);",
+							"    tests[\"Valida Name \" + i]  = (body[i].Name !== \"\");",
+							"}",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/OnlineChallenge/Make",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"OnlineChallenge",
+						"Make"
+					]
+				},
+				"description": "JSON retorno para leitura"
+			},
+			"response": [
+				{
+					"name": "HTTP OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/OnlineChallenge/Make",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Make"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"Email\": \"amet fugiat\",\n \"Password\": \"proi\",\n \"ConfirmPassword\": \"Ut\"\n}"
+				},
+				{
+					"name": "Internal Server Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/OnlineChallenge/Make",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Make"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Models",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6b51ea53-f6ea-4075-b132-b87512a90557",
+						"exec": [
+							"let body        = JSON.parse(responseBody);",
+							"let contentType = postman.getResponseHeader(\"Content-Type\");",
+							"let timeout     = pm.environment.get(\"timeout\");",
+							"",
+							"",
+							"tests[\"Valida código status\"]    = (responseCode.code === 200);",
+							"tests[\"Valida Content-Type\"]     = (contentType === \"application/json; charset=utf-8\");",
+							"",
+							"for (let i in body) {",
+							"    tests[\"Valida MakeID \" + i] = (body[i].MakeID >= 0);",
+							"    tests[\"Valida ID \" + i]     = (body[i].ID >= 0);",
+							"    tests[\"Valida Name \" + i]   = (body[i].Name !== \"\");",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/OnlineChallenge/Model?MakeID=2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"",
+						"api",
+						"OnlineChallenge",
+						"Model"
+					],
+					"query": [
+						{
+							"key": "MakeID",
+							"value": "2"
+						}
+					]
+				},
+				"description": "JSON retorno para leitura"
+			},
+			"response": [
+				{
+					"name": "HTTP OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/OnlineChallenge/Model?MakeID=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Model"
+							],
+							"query": [
+								{
+									"key": "MakeID",
+									"value": "<integer>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"Email\": \"amet fugiat\",\n \"Password\": \"proi\",\n \"ConfirmPassword\": \"Ut\"\n}"
+				},
+				{
+					"name": "Internal Server Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/OnlineChallenge/Model?MakeID=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Model"
+							],
+							"query": [
+								{
+									"key": "MakeID",
+									"value": "<integer>"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Version",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eaf6a2ef-aebc-4d7f-a0aa-6ef13235d80a",
+						"exec": [
+							"let body        = JSON.parse(responseBody);",
+							"let contentType = postman.getResponseHeader(\"Content-Type\");",
+							"let timeout     = pm.environment.get(\"timeout\");",
+							"",
+							"tests[\"Valida código status\"]    = (responseCode.code === 200);",
+							"tests[\"Valida Content-Type\"]     = (contentType === \"application/json; charset=utf-8\");",
+							"",
+							"for (let i in body) {",
+							"    tests[\"Valida MakeID \" + i] = (body[i].ModelID >= 0);",
+							"    tests[\"Valida ID \" + i]     = (body[i].ID >= 0);",
+							"    tests[\"Valida Name \" + i]   = (body[i].Name !== \"\");",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/OnlineChallenge/Version?ModelID=2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"OnlineChallenge",
+						"Version"
+					],
+					"query": [
+						{
+							"key": "ModelID",
+							"value": "2"
+						}
+					]
+				},
+				"description": "JSON retorno para leitura"
+			},
+			"response": [
+				{
+					"name": "HTTP OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/OnlineChallenge/Version?ModelID=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Version"
+							],
+							"query": [
+								{
+									"key": "ModelID",
+									"value": "<integer>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"Email\": \"amet fugiat\",\n \"Password\": \"proi\",\n \"ConfirmPassword\": \"Ut\"\n}"
+				},
+				{
+					"name": "Internal Server Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/OnlineChallenge/Version?ModelID=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Version"
+							],
+							"query": [
+								{
+									"key": "ModelID",
+									"value": "<integer>"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Vehicles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4f71cf6d-9f8a-4f92-bc1e-b024e07296c7",
+						"exec": [
+							"let body        = JSON.parse(responseBody);",
+							"let contentType = postman.getResponseHeader(\"Content-Type\");",
+							"let timeout     = pm.environment.get(\"timeout\");",
+							"",
+							"tests[\"Valida código status\"]    = (responseCode.code === 200);",
+							"tests[\"Valida Content-Type\"]     = (contentType === \"application/json; charset=utf-8\");",
+							"",
+							"for (let i in body) {",
+							"    tests[\"Valida ID \" + i]        = (body[i].ID >= 0);",
+							"    tests[\"Valida Make \" + i]      = (body[i].Make !== \"\");",
+							"    tests[\"Valida Model \" + i]     = (body[i].Model !== \"\");",
+							"    tests[\"Valida Version \" + i]   = (body[i].Version !== \"\");",
+							"    tests[\"Valida Image \" + i]     = (body[i].Image !== \"\");",
+							"    tests[\"Valida KM \" + i]        = (body[i].KM >= 0);",
+							"    tests[\"Valida Price \" + i]     = (body[i].Price !== \"\");",
+							"    tests[\"Valida YearModel \" + i] = (body[i].YearModel >= 1886); //Ano do primeiro carro lançado",
+							"    tests[\"Valida YearFab \" + i]   = (body[i].YearFab >= 1886);",
+							"    tests[\"Valida Color \" + i]     = (body[i].Color !== \"\");",
+							"",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/OnlineChallenge/Vehicles?Page=1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"OnlineChallenge",
+						"Vehicles"
+					],
+					"query": [
+						{
+							"key": "Page",
+							"value": "1",
+							"description": "(Required) Codigo do Modelo"
+						}
+					]
+				},
+				"description": "JSON retorno para leitura"
+			},
+			"response": [
+				{
+					"name": "Internal Server Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/OnlineChallenge/Vehicles?Page=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Vehicles"
+							],
+							"query": [
+								{
+									"key": "Page",
+									"value": "<integer>"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "HTTP OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/OnlineChallenge/Vehicles?Page=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Vehicles"
+							],
+							"query": [
+								{
+									"key": "Page",
+									"value": "<integer>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"Email\": \"amet fugiat\",\n \"Password\": \"proi\",\n \"ConfirmPassword\": \"Ut\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "http://desafioonline.webmotors.com.br",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
