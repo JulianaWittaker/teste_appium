@@ -1,0 +1,19 @@
+# frozen_string_literal: true
+
+source 'http://rubygems.org'
+
+
+gem 'appium_capybara'
+gem 'appium_console'
+gem 'appium_lib'
+gem 'appium_lib_core'
+gem 'capybara'
+gem 'cucumber'
+# gem 'mobile-helpers', git: 'git@bitbucket.org:webmotors/webmotors.automation.helpers.git'
+gem 'parallel_tests'
+gem 'rack'
+gem 'rspec'
+gem 'rspec-retry'
+gem 'selenium-webdriver'
+gem 'site_prism'
+gem 'toml-rb'

@@ -1,0 +1,12 @@
+[caps]
+platformName =  "Android"
+platformVersion = "8.1"
+deviceName = "Nexus S"
+automationName = "uiautomator2"
+appPackage = "br.com.siatiquosque.webmotorstest"
+appActivity= "br.com.siatiquosque.webmotorstest.SplashScreen"
+app =  "./app/webmotors.apk"
+
+
+[appium_lib]
+wait  = 20

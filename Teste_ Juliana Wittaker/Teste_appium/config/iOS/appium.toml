@@ -1,0 +1,11 @@
+[caps]
+port = "4723"
+platformName = "ios"
+platformVersion = "12.4"
+app = "app/webmotors.app"
+deviceName = "iPhone Xs Max"
+automationName = "XCUITest"
+udid = "08C4E9E3-8974-4801-8FC2-F75E4255D655"
+
+[appium_lib]
+wait = 20

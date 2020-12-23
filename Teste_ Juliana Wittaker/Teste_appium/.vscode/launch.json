@@ -1,0 +1,43 @@
+{
+"version": "0.2.0",
+"configurations": [
+
+
+    {
+        "name": "Cucumber Android",
+        "type": "Ruby",
+       "request": "launch",
+        "cwd": "${workspaceRoot}",
+        "program": "${workspaceRoot}/bin/cucumber",
+        "pathToRDebugIDE": "/Users/julianawittaker/.rbenv/shims/rdebug-ide",
+        "env": {
+            "PLATFORM_NAME": "android",
+            "PATH": "/Users/julianawittaker/.rbenv/shims:/Users/julianawittaker/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/Users/julianawittaker/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home/bin:/Users/julianawittaker/Library/Android/sdk/tools:/Users/julianawittaker/Library/Android/sdk/platform-tools:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/julianawittaker/.rvm/bin:/Users/julianawittaker/Library/Android/sdk/build-tools/27.0.1:/opt/bin:/Users/julianawittaker/node_modules/.bin/"
+        },
+        "args": [
+            //"features/requirements/listagemDeVeiculos",
+            // "--name",
+            // "listagem ve.culo",
+            //    "--tags", "@exclusivo-android"
+        ]
+    },
+    {
+        "name": "Cucumber IOS",
+        "type": "Ruby",
+        "request": "launch",
+        "cwd": "${workspaceRoot}",
+        "program": "${workspaceRoot}/bin/cucumber",
+        "pathToRDebugIDE": "/Users/julianawittaker/.rbenv/shims/rdebug-ide",
+        "env": {
+            "PLATFORM_NAME": "ios",
+            "PATH": "/Users/julianawittaker/.rbenv/shims:/Users/julianawittaker/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/Users/julianawittaker/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home/bin:/Users/julianawittaker/Library/Android/sdk/tools:/Users/julianawittaker/Library/Android/sdk/platform-tools:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/julianawittaker/.rvm/bin:/Users/julianawittaker/Library/Android/sdk/build-tools/27.0.1:/opt/bin:/Users/julianawittaker/node_modules/.bin/"
+        },
+        "args": [
+            // "features/requirements/listagemDeVeiculo",
+            // "--name",
+            // "listagem de veículo",
+             "--tags", "@ios-rodar"
+        ]
+    }
+]
+}
